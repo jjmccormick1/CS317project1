@@ -43,12 +43,14 @@ void insertionSort(int arr[])
 
 void quickSort(int arr[])
 {
-    
+    quick(arr, 0, 160);
 }
 
 void quick(int arr[], int m, int n)
 {
-    
+    int s = partition(arr[], m ,n);
+    quick(arr, m, s-1);
+    quick(arr, s+1,n);
 }
 
 int partition(int arr[], int m, int n)
